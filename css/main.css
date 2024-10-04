@@ -12,6 +12,7 @@
     --nav-bg-topbar: #3fbbc0;
     --nav-color2: #ebebeb;
     --surface: #fff;
+    --accent-color: #66d4d7;
 }
 
 body {
@@ -374,6 +375,13 @@ a {
   border-radius: 4px;
 }
 
+@media (max-height:500px), 
+(max-width:500px) {
+    .hero .carousel {
+        min-height: 100vh;
+    }
+}
+
 /* Featured Services Section */
 
 .featured-services .service-item {
@@ -402,7 +410,6 @@ a {
   font-size: 20px;
 }
 
-
 .featured-services .service-item h4 a {
   color: red;
 }
@@ -419,11 +426,116 @@ a {
   color: whitesmoke;
 }
 
+.featured-services .service-item:hover:before {
+  background: #3fbbc0;
+  inset: 0;
+  border-radius: 0;
+}
+
+.featured-services .service-item:before {
+  content: "";
+  position: absolute;
+  background: "";
+  z-index: -1;
+  inset: 100% 0 0 0;
+  transition: all 0.3s;
 
 
-@media (max-height:500px), 
-(max-width:500px) {
-    .hero .carousel {
-        min-height: 100vh;
-    }
+}
+
+/* Global Sections */
+
+section, 
+.section {
+  color: "";
+  background: #e0e0e0;
+  padding: 60px 0;
+}
+
+@media (max-width: 1199px) {
+  section,
+  .section {
+    scroll-margin-top: 100px;
+  }
+}
+
+.accent-background {
+  background: #3fbbc0;
+  color: #e0e0e0;
+}
+
+/* Global Sections Titles */
+
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: black;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/* About */
+
+.about .content h3 {
+  font-size: 1.75rem; /* Multiplicar *16 ou dividir /16 */
+  font-weight: 700;
+  color: #2293a0;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding: 10px 0 0 0;
+  display: flex;
+}
+
+.about .content ul i {
+  color: #00b0c4;
+  margin-right: 0.5rem;
+  line-height: 1.2;
+  font-size: 1.25rem;
+}
+
+.about .pulsating-play-btn {
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+}
+
+/* Pulsating play button */
+
+.pulsating-play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(var(--accent-color) 50%, color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  overflow: hidden;
 }
