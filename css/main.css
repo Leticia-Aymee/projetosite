@@ -135,7 +135,7 @@ a {
     .navmenu .dropdown ul a:hover,
     .navmenu .dropdown ul .active:hover,
     .navmenu .dropdown ul li:hover>a {
-        color: red;
+        color: rgb(252, 250, 250);
     }
 
     .navmenu .dropdown:hover>ul {
@@ -313,7 +313,7 @@ a {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
-  border-top: 4px solid red;
+  border-top: 4px solid #00cfe6;
   z-index: 3;
   margin-bottom: 50px;
 }
@@ -344,7 +344,7 @@ a {
 .hero .carousel-control-next-icon {
   background: #3fbbc0;
   font-size: 26px;
-  color: red;
+  color: rgb(255, 254, 254);
   border-radius: 50px;
   transition: 0.3s;
   width: 54px;
@@ -369,7 +369,7 @@ a {
 
 .hero .carousel-indicators li.active {
   opacity: 1;
-  background: red;
+  background: #01d2e9;
 }
 
 .header .cta-btn,
@@ -382,37 +382,11 @@ a {
   border-radius: 4px;
 }
 
-/* Responsivos */
 @media (max-height:500px), 
 (max-width:500px) {
     .hero .carousel {
         min-height: 100vh;
     }
-}
-
-@media (max-height: 500px),
-(max-width: 580px) {
-  .hero .carousel {
-    min-height: 100vh;
-  }
-}
-
-@media (max-height: 768px) {
-  .hero h2 {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 640px) {
-  .hero .carousel-control-prev {
-    padding-left: 15px;
-  }
-}
-
-@media (min-width: 640px) {
-  .hero .carousel-control-next {
-    padding-right: 15px;
-  }
 }
 
 /* Featured Services Section */
@@ -444,7 +418,7 @@ a {
 }
 
 .featured-services .service-item h4 a {
-  color: red;
+  color: rgb(75, 75, 75);
 }
 
 .featured-services .service-item p {
@@ -472,8 +446,6 @@ a {
   z-index: -1;
   inset: 100% 0 0 0;
   transition: all 0.3s;
-
-
 }
 
 /* Global Sections */
@@ -519,7 +491,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: black;
+  background: rgb(0, 184, 197);
   left: 0;
   right: 0;
   bottom: 0;
@@ -641,7 +613,6 @@ section,
 }
 
 /* STATUS */
-
 .stats .stats-item {
   background-color: var(--background-color);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
@@ -669,8 +640,6 @@ section,
   font-size: 16px;
   font-weight: 500;
 }
-/* fim dos status */
-
 
 /* Scroll Top Button */
 .scroll-top {
@@ -784,7 +753,7 @@ section,
 }
 
 .features .icon-box p {
-  line-height: 10px;
+  line-height: 20px;
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -943,8 +912,6 @@ section,
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  
 }
 
 .doctors .team-member .social a:hover {
@@ -961,9 +928,22 @@ section,
   bottom: 15px;
 }
 
+.doctors .team-member .social i {
+  font-size: 18px;
+  line-height: 0;
+}
 
+.doctors .team-member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
 
-
+.doctors .team-member .member-info span {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+}
 
 
 /* FAQ */
@@ -1016,7 +996,7 @@ section,
 }
 
 .faq .faq-container .faq-item .faq-toggle:hover {
-  color: red;
+  color: rgb(255, 255, 255);
 }
 
 .faq .faq-container .faq-active {
@@ -1034,6 +1014,100 @@ section,
   color: #01d2e9;
 }
 
+/* Contato */
+.contato .info-item {
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 24px 0 30px 0;
+}
 
+.contato .info-item i {
+  color: #0d8084;
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 2px dotted #0d8084;
+}
 
+.contato .info-item h3 {
+  font-size: 20px;
+  color: #383838;
+  font-weight: 700;
+  margin: 10px 0;
+}
 
+.contato .info-item p {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 575px) {
+  .contato .email-form {
+    padding: 20px;
+  }
+}
+
+.contato .email-form input[type=text],
+.contato .email-form input[type=email],
+.contato .email-form textarea {
+  font-size: 14px;
+  padding: 10px 15px;
+  box-shadow: none;
+  border-radius: 0;
+  color: #195052;
+  background: #fff;
+  border-color: #00cdcd;
+}
+
+/* Estrutura caixa do forms */
+.contato .email-form {
+  background: #fffdfd;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  padding: 30px;
+}
+
+.contato .email-form button[type=submit] {
+  color: #efefef;
+  background: #00b0c4;
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.contato .email-form button[type=submit]:hover {
+  background: #016772;
+}
+
+/* Responsivos */
+@media (max-height: 500px),
+(max-width: 580px) {
+  .hero .carousel {
+    min-height: 100vh;
+  }
+}
+
+@media (max-height: 768px) {
+  .hero h2 {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero .carousel-control-prev {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero .carousel-control-next {
+    padding-right: 15px;
+  }
+}
