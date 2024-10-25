@@ -354,9 +354,11 @@ a {
   align-items: center;
 }
 
-.hero .carousel-indicators {
+
+
+.hero .carousel-indicators li {
   cursor: pointer;
-  background: #444;
+  background: #ccc;
   width: 12px;
   height: 12px;
   opacity: 1;
@@ -366,7 +368,8 @@ a {
   transition: 0.3s;
 }
 
-.hero .carousel-indicators.active {
+
+.hero .carousel-indicators li.active {
   opacity: 1;
   background: red;
 }
@@ -886,7 +889,7 @@ section,
   position: relative;
   padding: 20px;
   margin-bottom: 15px;
-  border: ;
+  border: "";
   border-radius: 5px;
   overflow: hidden;
 }
